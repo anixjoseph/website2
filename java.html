@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Concepts Example</title>
+</head>
+<body>
+
+<div id="output"></div>
+
+<script>
+  // a. String methods
+  const sentence = "The quick brown fox jumps over the lazy dog.";
+  document.getElementById("output").innerHTML += "String Length: " + sentence.length + "<br>";
+  document.getElementById("output").innerHTML += "Uppercase: " + sentence.toUpperCase() + "<br>";
+  document.getElementById("output").innerHTML += "Lowercase: " + sentence.toLowerCase() + "<br>";
+  document.getElementById("output").innerHTML += "Substring: " + sentence.substring(4, 15) + "<br>";
+  document.getElementById("output").innerHTML += "Index of 'fox': " + sentence.indexOf("fox") + "<br>";
+
+  // b. Number methods
+  const pi = 3.14159;
+  document.getElementById("output").innerHTML += "Fixed to 2 decimal places: " + pi.toFixed(2) + "<br>";
+  document.getElementById("output").innerHTML += "Rounded down: " + Math.floor(pi) + "<br>";
+  document.getElementById("output").innerHTML += "Ceiling value: " + Math.ceil(pi) + "<br>";
+  document.getElementById("output").innerHTML += "Exponential notation: " + pi.toExponential(2) + "<br>";
+  document.getElementById("output").innerHTML += "Maximum value: " + Math.max(5, 2, 8, 1, 9) + "<br>";
+
+  // c. Array methods
+  const fruits = ['apple', 'banana', 'orange', 'grape', 'kiwi'];
+  document.getElementById("output").innerHTML += "Array Length: " + fruits.length + "<br>";
+  document.getElementById("output").innerHTML += "Joined as string: " + fruits.join(', ') + "<br>";
+  document.getElementById("output").innerHTML += "First item: " + fruits[0] + "<br>";
+  fruits.push('pear');
+  document.getElementById("output").innerHTML += "Pushed 'pear': " + fruits + "<br>";
+  document.getElementById("output").innerHTML += "Popped item: " + fruits.pop() + "<br>";
+
+  // d. Date methods
+  const now = new Date();
+  document.getElementById("output").innerHTML += "Current Date: " + now + "<br>";
+  document.getElementById("output").innerHTML += "Year: " + now.getFullYear() + "<br>";
+  document.getElementById("output").innerHTML += "Month: " + now.getMonth() + "<br>";
+  document.getElementById("output").innerHTML += "Day: " + now.getDay() + "<br>";
+  document.getElementById("output").innerHTML += "Hours: " + now.getHours() + "<br>";
+
+  // e. Function methods
+  function greet(name) {
+    return "Greetings, " + name + "!";
+  }
+  document.getElementById("output").innerHTML += greet("Bob") + "<br>";
+
+  function power(base, exponent) {
+    return Math.pow(base, exponent);
+  }
+  document.getElementById("output").innerHTML += "Power: " + power(2, 3) + "<br>";
+
+</script>
+
+</body>
+</html>
